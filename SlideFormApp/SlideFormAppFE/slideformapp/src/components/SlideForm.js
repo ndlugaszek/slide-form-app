@@ -179,9 +179,10 @@ function Step2(props) {
           value={props.usergender}
           onChange={props.handleChange}
         >
-          <option>Kobieta</option>
-          <option>Mężczyczna</option>
           <option>Nie chcę podawać</option>
+          <option>Kobieta</option>
+          <option>Mężczyzna</option>
+
         </select>
       </div>
       <button className="btn btn-success btn-block">Wyślij</button>

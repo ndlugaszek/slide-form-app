@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\C#\\source\\repos\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\SlideFormApp.csproj",
+      "projectUniqueName": "C:\\Projects\\Git\\slide-form-app\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\SlideFormApp.csproj",
       "projectName": "SlideFormApp",
-      "projectPath": "C:\\Projects\\C#\\source\\repos\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\SlideFormApp.csproj",
+      "projectPath": "C:\\Projects\\Git\\slide-form-app\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\SlideFormApp.csproj",
       "packagesPath": "C:\\Users\\Asnod\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\C#\\source\\repos\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\obj\\",
+      "outputPath": "C:\\Projects\\Git\\slide-form-app\\SlideFormApp\\SlideFormAppBE\\SlideFormApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asnod\\AppData\\Roaming\\NuGet\\NuGet.Config",
