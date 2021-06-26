@@ -36,7 +36,7 @@ class SlideForm extends Component {
              Nazwisko: ${lastname} \n
              Adres: ${address} \n
              Płeć: ${usergender}`)
-    fetch('https://localhost:44353/api/form', {
+    fetch('https://localhost:5001/api/form', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json; charset=utf-8',
