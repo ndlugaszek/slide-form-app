@@ -3,4 +3,4 @@ In the project directory, you can run:
 
 ### dotnet run
 
-Runs the server at https://localhost:5001 or http://localhost:5000
+Runs the server at http://localhost:5000
