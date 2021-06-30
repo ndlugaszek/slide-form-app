@@ -13,7 +13,8 @@ namespace SlideFormApp.Controllers
         [HttpPost]
         public User Create(User user)
         {
-            SaveUserService.SaveUserToFile(user);
+            SaveUserService save = new();
+            save.SaveUserToFile(user);
 
             return user;
         }
