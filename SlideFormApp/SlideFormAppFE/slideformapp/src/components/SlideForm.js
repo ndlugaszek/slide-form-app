@@ -31,6 +31,22 @@ class SlideForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     const { firstname, lastname, address, usergender } = this.state
+    // Checking that the fields are not empty or null
+    if (this.state.firstname === null || this.state.firstname.length === 0) {
+      this.prev()
+      return alert("The first name is empty! Please fill the field.")
+    }
+    if (this.state.lastname === null || this.state.firstname.length === 0) {
+      this.prev()
+      return alert("The last name is empty! Please fill the field.")
+    }
+    if (this.state.address === null || this.state.firstname.length === 0) {
+      this.prev()
+      return alert("The address is empty! Please fill the field.")
+    }
+    if (this.state.usergender === null) {
+      return alert("The gender is not selected! Please select the gender.")
+    }
     alert(`Twoje dane: \n 
              Imię: ${firstname} \n 
              Nazwisko: ${lastname} \n
@@ -48,6 +64,12 @@ class SlideForm extends Component {
         usergender: usergender,
       }),
     })
+    .then(response => response.json())
+    .then(data=>{
+      console.log("Success:", data);
+    }).catch((err)=>{
+      console.error("Error: ", err);
+    });
     this.resetState()
   }
 
@@ -174,6 +196,7 @@ function Step2(props) {
           value={props.usergender}
           onChange={props.handleChange}
         >
+          <option> </option>
           <option>Nie chcę podawać</option>
           <option>Kobieta</option>
           <option>Mężczyzna</option>
