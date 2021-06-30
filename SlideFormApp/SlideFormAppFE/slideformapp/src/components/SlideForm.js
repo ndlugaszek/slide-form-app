@@ -5,19 +5,19 @@ class SlideForm extends Component {
     super(props)
     this.state = {
       currentStep: 1,
-      firstname: '',
-      lastname: '',
-      address: '',
-      usergender: '',
+      firstname: null,
+      lastname: null,
+      address: null,
+      usergender: null,
     }
   }
   resetState() {
     this.setState({
       currentStep: 1,
-      firstname: '',
-      lastname: '',
-      address: '',
-      usergender: '',
+      firstname: null,
+      lastname: null,
+      address: null,
+      usergender: null,
     })
   }
 
@@ -71,7 +71,7 @@ class SlideForm extends Component {
     let currentStep = this.state.currentStep
     if (currentStep !== 1) {
       return (
-        <button className="btn btn-secondary" type="button" onClick={this.prev}>
+        <button type="button" onClick={this.prev}>
           Cofnij
         </button>
       )
@@ -84,7 +84,6 @@ class SlideForm extends Component {
     if (currentStep < 2) {
       return (
         <button
-          className="btn btn-primary float-right"
           type="button"
           onClick={this.next}
         >
@@ -127,10 +126,9 @@ function Step1(props) {
     return null
   }
   return (
-    <div className="form-group">
+    <div>
       <label htmlFor="firstname">Imię</label>
       <input
-        className="form-control"
         id="firstname"
         name="firstname"
         type="text"
@@ -140,7 +138,6 @@ function Step1(props) {
       />
       <label htmlFor="lastname">Nazwisko</label>
       <input
-        className="form-control"
         id="lastname"
         name="lastname"
         type="text"
@@ -150,7 +147,6 @@ function Step1(props) {
       />
       <label htmlFor="address">Adres</label>
       <input
-        className="form-control"
         id="address"
         name="address"
         type="text"
@@ -168,10 +164,9 @@ function Step2(props) {
   }
   return (
     <React.Fragment>
-      <div className="form-group">
+      <div>
         <label htmlFor="gender">Płeć</label>
         <select
-          className="form-control"
           id="usergender"
           name="usergender"
           type="text"
@@ -185,7 +180,7 @@ function Step2(props) {
 
         </select>
       </div>
-      <button className="btn btn-success btn-block">Wyślij</button>
+      <button>Wyślij</button>
     </React.Fragment>
   )
 }
