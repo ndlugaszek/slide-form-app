@@ -10,12 +10,17 @@ namespace SlideFormApp.Services
     // Service, which saves user object to the file
     public class SaveUserService : ISaveable
     {
-        private static int userCounter = 0;
-        public void SaveUserToFile(User user)
+        private static int userIdCounter = 0;
+
+        public SaveUserService()
         {
             // Auto increments of user IDs
-            user.Id = userCounter;
-            userCounter++;
+            userIdCounter++;
+        }
+        public void SaveUserToFile(User user)
+        {
+            // Assigning the ID to the user
+            user.Id = userIdCounter;
 
             // Generates the new file name in OS default "My Documents" folder
             var newFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) +
